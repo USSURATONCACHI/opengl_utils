@@ -1,3 +1,9 @@
+cmake_minimum_required(VERSION 3.5)
+project(s21_ussur_better_c_std VERSION 1.0.0 LANGUAGES C)
+
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Epoxy REQUIRED epoxy)
 
@@ -12,7 +18,7 @@ target_include_directories(s21_ussur_opengl_utils PRIVATE ${EPOXY_INCLUDE_DIRS})
 target_link_directories   (s21_ussur_opengl_utils PRIVATE ${EPOXY_LIBRARY_DIRS})
 target_link_libraries     (s21_ussur_opengl_utils PUBLIC  ${EPOXY_LIBRARIES})
 
-target_link_libraries     (s21_ussur_opengl_utils PUBLIC  s21_ussur_better_c_std)
+target_link_libraries     (s21_ussur_opengl_utils PUBLIC s21_ussur_better_c_std)
 
 target_include_directories(s21_ussur_opengl_utils PUBLIC include)
 
