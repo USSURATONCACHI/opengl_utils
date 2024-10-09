@@ -9,6 +9,8 @@ typedef struct Mesh {
     int indices_count;
 } Mesh;
 
+#define NULL_MESH ((Mesh) { 0, 0, 0, 0, 0 })
+
 Mesh mesh_create();
 void mesh_delete(Mesh);
 
