@@ -10,13 +10,6 @@ typedef struct Framebuffer {
 
 #define NULL_FRAMEBUFFER ((Framebuffer) { 0, 0 })
 
-typedef struct {
-    
-} GlutilsError;
-
-typedef struct {
-
-} FramebufferResult;
 Framebuffer framebuffer_create(int width, int height);
 void framebuffer_free(Framebuffer f);
 
