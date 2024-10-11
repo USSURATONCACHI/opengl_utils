@@ -25,8 +25,8 @@ Shader shader_from_source(GLuint type, const char* source) {
 }
 
 Shader shader_from_file(GLenum type, const char* filepath) {
-  str_t src = read_file_to_str(filepath);
+  BcstdStr src = read_file_to_str(filepath);
   Shader result = shader_from_source(type, src.string);
-  str_free(src);
+  BcstdStr_free(src);
   return result;
 }
