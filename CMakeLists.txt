@@ -4,9 +4,15 @@ project(s21_ussur_better_c_std VERSION 1.0.0 LANGUAGES C)
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
+# Dependencies
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(Epoxy REQUIRED epoxy)
 
+option(BCSTD_BUILD_EXAMPLES OFF)
+add_subdirectory(better_c_std)
+
+
+# Library itself
 add_library(s21_ussur_opengl_utils SHARED
     src/framebuffer.c
     src/gl_program.c
